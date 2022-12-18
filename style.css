@@ -1,0 +1,213 @@
+/*Link_Fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/*Pseudo_classe - Para armazenar as variáveis*/
+:root{
+    --white: #FFF;
+    --white_smoke: #F9F9F9;
+    --light_grey: #ECECEC;
+    --grey: #C4C4C4;
+    --medium_grey: #A7A7A7;
+    --deep_grey: #343434;
+    --black: #000000;
+    --blue: #1B77F3;
+    --red: #CF3C3F;
+}
+
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 375px;
+    min-height: 100vh;
+    background-color: white;
+    padding: clamp(10px, 5%, 30px);
+}
+
+.Todo{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.login_logo{
+    width: 80px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    background-color: var(--medium_grey);
+    border-radius: 8px;
+}
+
+.login_title{
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.login_label{
+    display: block;
+    width: 85%;
+    color: black;
+    margin-bottom:15px;
+}
+
+.input{
+    width: 100%;
+    height: 45px; 
+    background-color: var(--light_grey);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.0em;
+    padding: 25px 10px 10px;
+    font-weight: 600;
+}
+
+.login_label span{
+    position: absolute;
+    font-size: 0.6em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--medium_grey);
+    margin: 16px;
+    cursor: text;
+    transition: all 150ms ease;
+}
+
+/*Pseudoclasse Focus para alterar a disposição dos elementos quando "focados"*/
+.input:focus{
+    background-color: var(--light_grey);
+    outline: inset;
+    outline-color: var(--deep_grey);
+    outline-width: 0.13em;
+}
+
+.login_label .span_active{
+    font-size: 0.6em; 
+    margin-top:4px;
+    margin-left: 4px;
+}
+
+.login_icons{
+    display: flex;
+    gap: 8px;
+    width: 85%;
+}
+
+.login_icons img{
+    width: 25px;
+}
+
+
+.icons_button{
+    width: 33%;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--light_grey);
+    border: none;
+}
+
+.login_label_checkbox{
+    width: 85%;
+    margin: 8px 0 150px;
+    font-size: 0.9em; 
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.input_check_box{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--light_grey);
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: 150ms ease ;
+}
+
+.input_check_box:checked{
+    background-color: black;
+}
+.input_check_box:checked::after{
+    content: "";
+    display:block;
+    height: 10px;
+    width: 5px;
+    border: 3px solid var(--light_grey);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 2px 6px;
+}
+
+.login-button{
+    width: 50px;
+    height: 50px;
+    background-color: #1ba7b9;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: 200ms ease;
+}
+
+.login-button img{
+    width: 30px; 
+    margin-left: 5px;
+}
+
+.login-button:disabled{
+    cursor: auto;
+    background-color: var(--light_grey);
+}
+
+
+.login_link{
+    font-size: 0.6em;
+    text-decoration: none;
+    color: var(--medium_grey);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+.wallpaper_1{
+    width:100%;
+    background-size: cover;
+    flex:1;
+    background-image: url(./imagens/Earthblade_Login_01.png);  
+    transition: 1000ms ease;
+}
+
+.wallpaper_2{
+    width:100%;
+    background-size: cover;
+    background-image: url(./imagens/Earthblade_Login_02.png);
+    flex:1;
+    transition: 1000ms ease;
+}
+
+main{
+    display: flex;
+}
