@@ -1,19 +1,20 @@
 const inputs = document.querySelectorAll('.input');
 const button = document.querySelector('.login-button');
 const back_ground = document.querySelector('.wallpaper_1');
-let contador = 0
-setInterval(()=>{
 
-    if(contador%2==0){
-        back_ground.classList.remove('wallpaper_1');
-        back_ground.classList.add('wallpaper_2');
+let contador = 1
+setInterval(()=>{
+    let n = 3; //Número máximo de imagens no Login
+    if(contador == n){
+        back_ground.classList.remove(`wallpaper_${n}`);
+        back_ground.classList.add(`wallpaper_${1}`);
+        contador = 0;
     }
     else{
-        back_ground.classList.remove('wallpaper_2');
-        back_ground.classList.add('wallpaper_1');
+    back_ground.classList.remove(`wallpaper_${contador}`);
+    back_ground.classList.add(`wallpaper_${contador+1}`);
     }
     contador+=1;
-
 
 }, 4000);
 

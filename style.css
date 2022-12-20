@@ -208,6 +208,14 @@
     transition: 1000ms ease;
 }
 
+.wallpaper_3{
+    width:100%;
+    background-size: cover;
+    background-image: url(./imagens/Earthblade_Login_03.jpg);
+    flex:1;
+    transition: 1000ms ease;
+}
+
 main{
     display: flex;
 }
